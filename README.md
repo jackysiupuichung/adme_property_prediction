@@ -15,10 +15,14 @@ Labels: CYP2C9 inhibition. Binary classification
 
 ## Workflow
 Train a supervised graph neural network, a tree model and a transformer model with desired dataset
+
 Benchmark the performance of the models and choose an appropriate metric to compare them
 
 ### models comparisons
 |   | xgboost tree | GNN | Transformer |
 | ------------- | ------------- | ------------- | ------------- |
 | model description | decision-tree-based ensemble supervised algorithm that uses a gradient boosting framework | deep learning method designed to perform inference on data described by graphs | The pre-trained transformer model named ‘PubChem10M_SMILES_BPE_396_250′ selected from ChemBERTa for fine-tuning |
-|  Data preprocessing | transformed into word embeddings using mol2vec where molecules are represented in 300-dimensional vector | transformed into torch_geometric.data.Data objects which represent labeled molecular graphs| tokenizened over SMILES strings using the tokenisation SMILES regex developed by Schwaller et. al.| 
+|  Data preprocessing | transformed into word embeddings using mol2vec where molecules are represented in 300-dimensional vector | transformed into torch_geometric.data.Data objects which represent labeled molecular graphs| tokenizened over SMILES strings using the tokenisation SMILES regex developed by Schwaller et. al.|
+
+###model performance
+model performance for prediction of CYP P450 2C9 Inhibition can be found in ADME_classification.ipynb
